@@ -13,6 +13,7 @@ createRoot(document.getElementById('root')).render(<>
  <Wrapper>
   <div className='bg-gray-950 h-fit overflow-x-hidden'>
       <Nav />
+      <App/>
       <Mainroutes/>
       <ToastContainer/>
   </div>
