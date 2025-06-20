@@ -34,12 +34,6 @@ Stay tuned! New updates are coming soon. 🚀
 
 ---
 
-## 🤝 Contributing
-
-Have ideas or want to help? Contributions are welcome!  
-Just open an issue or a pull request.
-
----
 
 ## 📬 Stay Connected
 
