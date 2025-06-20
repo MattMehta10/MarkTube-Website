@@ -1,12 +1,49 @@
-# React + Vite
+# 📺 MarkTube — React Version (Under Development)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **new MarkTube** project!  
+This is an enhanced, **under-development version** of MarkTube, now being built using **React** and packed with exciting new features and improvements!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚧 Project Status
 
-## Expanding the ESLint configuration
+> ⚠️ This version is currently in active development.  
+We’re working hard to bring you a smoother, faster, and more powerful version of MarkTube built with modern tools.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🕹 Try the Base Version
+
+While this version is being built, you can still use the **fully functional base version** of MarkTube available here:
+
+🔗 [**Original MarkTube Repository**](#) <!-- Replace # with actual repo link -->
+
+> 💡 Most of the **core features** remain the same, so feel free to explore the previous version in the meantime.
+
+---
+
+## 💡 What's Coming
+
+- ⚛️ Built completely with **React**
+- 🎯 Improved performance and UX
+- 🔐 New features and enhancements
+- 🌈 Cleaner design & codebase
+
+Stay tuned! New updates are coming soon. 🚀
+
+---
+
+## 🤝 Contributing
+
+Have ideas or want to help? Contributions are welcome!  
+Just open an issue or a pull request.
+
+---
+
+## 📬 Stay Connected
+
+Follow this repo to stay updated as we roll out new features.  
+Your feedback means a lot!
+
+---
+
