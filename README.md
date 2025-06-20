@@ -16,7 +16,7 @@ We’re working hard to bring you a smoother, faster, and more powerful version 
 
 While this version is being built, you can still use the **fully functional base version** of MarkTube available here:
 
-🔗 [**Original MarkTube Repository**](#) <!-- Replace # with actual repo link -->
+🔗 [**Original MarkTube Repository**](https://github.com/MattMehta10/MarkTube-YouTube-Manager) <!-- Replace # with actual repo link -->
 
 > 💡 Most of the **core features** remain the same, so feel free to explore the previous version in the meantime.
 
