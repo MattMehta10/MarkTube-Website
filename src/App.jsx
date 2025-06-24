@@ -15,9 +15,9 @@ const App = () => {
   return (
     <ReactLenis root options={{ smooth:true , autoRaf:false , duration: 1.2 }}>
     <Hero />
-    <hr className='text-white mt-3 mx-[19rem]' />
+    <hr className='lg:flex hidden text-white mt-3 mx-90' />
     <Handon data={data}/>
-    <hr className='text-white mt-3 mx-[19rem]' />
+    <hr className='text-white lg:flex hidden mt-3 mx-[19rem]' />
     <CardGrid/>
     <EndOfHomePage/>
     </ReactLenis>

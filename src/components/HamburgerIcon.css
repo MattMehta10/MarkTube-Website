@@ -1,0 +1,32 @@
+nav {
+  background: #333;
+  padding: 20px;
+}
+
+.nav-icon {
+  margin: 0;
+  width: 30px;
+  cursor: pointer;
+}
+
+.nav-icon:after,
+.nav-icon:before,
+.nav-icon div {
+  background-color: #fff;
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-icon.closed:before {
+  transform: translateY(3px) translateX(-2px) rotate(135deg);
+  width: 15px;
+}
+
+.nav-icon.closed:after {
+  transform: translateY(-3px) translateX(-2px) rotate(-135deg);
+  width: 15px;
+}

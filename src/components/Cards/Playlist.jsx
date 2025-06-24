@@ -60,7 +60,7 @@ const Playlist = ({data, size }) => {
       <HiOutlineDotsVertical className="text-4xl absolute right-3 bottom-10" />
 
       {/* Hover Buttons */}
-      <div className="absolute group-hover:opacity-100 flex items-center justify-center gap-3 bottom-5 right-6 rounded-2xl opacity-0 duration-200 ease-in-out bg-[#1d1c1c] w-25 h-8 px-2">
+      <div className="absolute group-hover:opacity-100 flex items-center justify-center gap-3 bottom-5 right-6 rounded-2xl lg:opacity-0 duration-200 ease-in-out bg-[#1d1c1c] w-25 h-8 px-2">
         <button
           title="Mark As Watched"
           onClick={() => ToggleBorder('green')}

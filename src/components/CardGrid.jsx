@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react';
 import Playlist from './Cards/Playlist';
 import { MyContext } from '../Wrapper';
 import './CardGrid.css';
-import introcond from "../../public/Intro Cond Black Free.otf"
+import introcond from "/Intro Cond Black Free.otf"
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import TextPlugin from 'gsap/TextPlugin';
@@ -68,7 +68,31 @@ export default function CardGrid() {
   });
 
   useGSAP((e)=>{
-    let t1 = gsap.timeline({
+    const mm = gsap.matchMedia();
+      mm.add(
+    {
+      isDesktop: "(min-width: 768px)",
+      isMobile: "(max-width: 767px)",
+    },
+    (context) => {
+      const { isDesktop, isMobile } = context.conditions;
+    
+    gsap.from(containerRef.current,{
+    opacity:0,
+    duration:1,
+    scrollTrigger:{
+      trigger:containerRef.current,
+          scrub:true,
+          start:"top 20%",
+          end:"start 10%",
+          toggleActions: "play none none none", 
+          // markers:true,
+          once: true,  
+
+    }
+  })
+    if(isDesktop){
+let t1 = gsap.timeline({
       scrollTrigger:{
           trigger:".wrapper",
           scrub:true,
@@ -117,6 +141,47 @@ t2.from(containerRef.current, {
       // markers:true,  
     }
   },"A")
+    }
+    if(isMobile){
+let t1 = gsap.timeline({
+      scrollTrigger:{
+          trigger:".wrapper",
+          scrub:true,
+          start:"top 40%",
+          end:"start 10%",
+          toggleActions: "play none none none", 
+          // markers:true,
+          once: true,  
+        }
+    })
+    t1.to(HeadRef.current,{
+        text:'From cluttered queues to curated clarity.',
+        duration:5,        
+    })
+    
+    let t2=gsap.timeline({
+    scrollTrigger:{
+      trigger:".textwrapper",
+        scrub:true,
+        start:"top 50%",
+        end:"start 40%",
+        // markers:true,  
+        toggleActions: "play none none none",
+        once: true,  
+      }
+    })
+
+  t2.from(TextRef1.current,{x:100,opacity:0,duration:5},"A")
+  t2.from(TextRef3.current,{x:100,opacity:0,duration:5},"A")
+  t2.from(TextRef2.current,{x:-100,opacity:0,duration:5},"A")
+  t2.from(containerRef.current, {
+  css: { "pointer-events": "none" }
+},"A");
+
+}
+})
+
+    
 
 
 
@@ -124,15 +189,15 @@ t2.from(containerRef.current, {
 })
   
   return (
-  <div className='wrapper flex flex-col items-center ' >
-      <p ref={HeadRef} className='absolute mt-10 font-[gilroy] font-bold z-5 text-white text-4xl text-shadow-2xl' ></p>
-    <div className="bg-black relative flex justify-center scale-70 min-h-screen px-4 md:px-8 space-y-2 overflow-hidden fade-all-sides">
-      <div className={`textwrapper absolute items-center flex flex-col top-1/2 left-1/2 text-7xl scale-145 font-extrabold -translate-x-1/2 -translate-y-1/2 z-50 text-white text-center`}>
+  <div className='wrapper relative flex flex-col lg:mt-0 mt-50 items-center ' >
+      <p ref={HeadRef} className='absolute lg:mt-10 mt-0 lg:mb-0 mb-10 font-[gilroy] font-bold z-5 text-white lg:text-4xl text-lg text-shadow-2xl' ></p>
+    <div className=" lg:mt-0 mt-25 bg-black lg:h-auto h-120 relative flex justify-center lg:scale-70 lg:min-h-screen px-4 md:px-8 space-y-2 overflow-hidden fade-all-sides">
+      <div className={`textwrapper absolute items-center flex flex-col top-1/2 left-1/2 lg:text-7xl text-4xl lg:scale-145 font-extrabold -translate-x-1/2 -translate-y-1/2 z-50 text-white text-center`}>
           <span ref={TextRef1}  className='bg-[#101828] text-[#00d491] inline w-fit px-1' >REINVENT YOUR</span>
           <span ref={TextRef2} className='bg-[#101828] text-[#00d491]  inline w-fit px-1'>YOUTUBE</span>
           <span ref={TextRef3} className='bg-[#101828] text-[#00d491]  inline w-fit px-1'>EXPERIENCE.</span> 
       </div>
-      <div ref={containerRef} className="px-4 md:px-8 space-y-6 w-[150rem] -rotate-5">
+      <div ref={containerRef} className="px-4 lg:scale-100 lg:translate-y-0 -translate-y-50 scale-40 md:px-8 space-y-6 w-[150rem] -rotate-5">
         {rows}
       </div>
     </div>
