@@ -1,5 +1,4 @@
 import Aurora from "../assets/Backgrounds/Aurora/Aurora"
-import chromelogo from "/chromelogo.png?url"
 import { IoIosArrowDown } from "react-icons/io";
 import Standard from '../components/Cards/Standard';
 import SpotlightCard from "../assets/Components/SpotlightCard/SpotlightCard";
@@ -8,7 +7,6 @@ import { useContext, useEffect, useRef } from "react";
 import { MyContext } from "../Wrapper";
 import { useLenis } from "lenis/react";
 import { useGSAP } from '@gsap/react'
-import logo from '/logo.png'
 import gsap from 'gsap';
 
 gsap.registerPlugin(useGSAP);
@@ -125,14 +123,14 @@ if (isDesktop) {
           <MdKeyboardDoubleArrowDown className="absolute text-2xl lg:block text-white hidden transform translate-x-1/2 bottom-10 animate-bounce z-50"/>
       <div>
         <div className="top flex-col lg:h-100 gap-5 justify-center lg:mt-12 bg-gray-950 text-white flex lg:p-0 p-5">
-          <h1 className='text-white z-30 flex items-center gap-2 text-4xl lg:text-8xl lg:mb-0 mb-5 font-extrabold font-[gilroy]'><img className='h-11 lg:hidden z-5' src={logo}/><span id="marktube" >MarkTube</span></h1>
+          <h1 className='text-white z-30 flex items-center gap-2 text-4xl lg:text-8xl lg:mb-0 mb-5 font-extrabold font-[gilroy]'><img className='h-11 lg:hidden z-5' src='/logo.png'/><span id="marktube" >MarkTube</span></h1>
         <p className="hometext text-white w-80 lg:w-120 z-10 ">Tired of losing track of important videos? With MarkTube, save what matters, mark what’s next, and finally bring order to your YouTube flow.</p>
             <h3 className='hometext text-white z-30 text-lg font-extrabold font-[gilroy]'> Manage Your YouTube. Your Way.</h3>
           <div ref={homebtnsRef} className="flex lg:mt-0 mt-6 mb-5 lg:gap-5 gap-3" >
         <div className="flex items-center" >
             <button onClick={handleDownload} className=" border-1 overflow-hidden relative flex justify-between items-center py-5 gap-5 pl-5 rounded-xl h-5 hover:text-green-200 hover:scale-105  active:scale-95" >
               <h1>Try It Now</h1>
-              <img className="h-10 pr-6 pb-2 pt-2 bg-green-400 duration-350 ease-in-out hover:bg-green-500" src={chromelogo} alt="" />
+              <img className="h-10 pr-6 pb-2 pt-2 bg-green-400 duration-350 ease-in-out hover:bg-green-500" src='/chromelogo.png' alt="chrome" />
               <IoIosArrowDown className="absolute animate-pulse right-1 text-lg text-white"/></button>
         </div>
         <button onClick={scrollToWorking} className=" active:scale-95 hover: relative border-1 flex items-center p-5 rounded-xl h-5 overflow-hidden group transition duration-300 ease-out">

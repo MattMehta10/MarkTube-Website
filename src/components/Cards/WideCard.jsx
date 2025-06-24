@@ -109,7 +109,7 @@ if (isMobile) {
       <div className='flex flex-col gap-5'>
     <h1 className='text-2xl font-bold' >{data.title}</h1>
       <div className='flex items-center gap-3.5' >
-        <div className={`bg-[url(./public/psy-02.jpg)]  bg-cover bg-top rounded-full h-12 w-12`} ></div>
+        <div className={`bg-[url(/psy-02.jpg)]  bg-cover bg-top rounded-full h-12 w-12`} ></div>
         <p className='font-extrabold' >{data.channel}</p>
       <div className='flex items-center justify-center gap-3 bottom-5 right-6 rounded-2xl bg-[#1d1c1c] w-25 h-10 text-white'>Subscribe</div></div></div>
         </div>

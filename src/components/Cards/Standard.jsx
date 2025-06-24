@@ -72,7 +72,7 @@ return () => console.log("cleaned responsive animations");
     relative bg-[#ffffff] w-120 duration-75 lg:scale-100 scale-[0.65] ease-in-out rounded-2xl p-5 h-100 group`}>
       <div className={`bg-cover bg-center w-110 h-65 rounded-2xl`} style={{ backgroundImage: `url(${data.thumbnail})` }} ></div>
       <div className='flex mt-3 gap-5'>
-        <div className={`bg-[url(../../../public/rick.webp)] bg-cover bg-center rounded-full h-15 w-15`} ></div>
+        <div className={`bg-[url(/rick.webp)] bg-cover bg-center rounded-full h-15 w-15`} ></div>
         <div>
           <h1 className='text-2xl font-bold' >{data.title}</h1>
           <p>{data.channel}</p>
