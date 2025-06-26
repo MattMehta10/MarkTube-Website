@@ -8,6 +8,7 @@ import { MyContext } from "../Wrapper";
 import { useLenis } from "lenis/react";
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
+import { useLocation } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP);
 const Hero = () => {
@@ -16,7 +17,7 @@ const Hero = () => {
     const cardRef = useRef(null);
     const bgRef = useRef(null);
     const homebtnsRef = useRef(null);
-
+  const location = useLocation()
     const scrollToWorking=()=>{
       lenis.scrollTo('#Working',{duration:2})
     }
@@ -34,6 +35,8 @@ const Hero = () => {
     },[lenis])
 
 useGSAP(() => {
+  gsap.set("#marktube", { clearProps: "all" }); // removes inline styles
+  gsap.set(cardRef.current, { clearProps: "all" });
   const mm = gsap.matchMedia();
 
   // ✅ matchMedia should be "called" like this:
@@ -46,19 +49,7 @@ useGSAP(() => {
       const { isDesktop, isMobile } = context.conditions;
 
 if (isDesktop) {
-  gsap.from("#marktube", {
-        x: -100,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
-      },"a");
-      
-    gsap.from(cardRef.current, {
-    x: 50,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out",
-  },"a");
+
     }
 
       if (isMobile) {
@@ -74,6 +65,18 @@ if (isDesktop) {
     }
   );
 
+  gsap.to(cardRef.current, {
+    x: 0,
+    opacity: 1,
+    duration: 2,
+    ease: "power2.out",
+  });
+   gsap.to("#marktube", {
+    x: 0,
+    opacity: 1,
+    duration: 2,
+    ease: "power2.out",
+  });
   gsap.from(bgRef.current, {
     opacity: 0,
     duration: 2,
@@ -102,7 +105,7 @@ if (isDesktop) {
   });
   // ✅ Cleanup
   return () => mm.revert();
-}, []);
+}, [location]);
 
     
     const handleDownload = () => {
@@ -123,7 +126,7 @@ if (isDesktop) {
           <MdKeyboardDoubleArrowDown className="absolute text-2xl lg:block text-white hidden transform translate-x-1/2 bottom-10 animate-bounce z-50"/>
       <div>
         <div className="top flex-col lg:h-100 gap-5 justify-center lg:mt-12 bg-gray-950 text-white flex lg:p-0 p-5">
-          <h1 className='text-white z-30 flex items-center gap-2 text-4xl lg:text-8xl lg:mb-0 mb-5 font-extrabold font-[gilroy]'><img className='h-11 lg:hidden z-5' src='/logo.png'/><span id="marktube" >MarkTube</span></h1>
+          <h1 className='text-white z-30 flex items-center gap-2 text-4xl lg:text-8xl lg:mb-0 mb-5 font-extrabold font-[gilroy]'><img className='h-11 lg:hidden z-5' src='/logo.png'/><span className="-translate-x-100 opacity-0" id="marktube" >MarkTube</span></h1>
         <p className="hometext text-white w-80 lg:w-120 z-10 ">Tired of losing track of important videos? With MarkTube, save what matters, mark what’s next, and finally bring order to your YouTube flow.</p>
             <h3 className='hometext text-white z-30 text-lg font-extrabold font-[gilroy]'> Manage Your YouTube. Your Way.</h3>
           <div ref={homebtnsRef} className="flex lg:mt-0 mt-6 mb-5 lg:gap-5 gap-3" >
@@ -171,7 +174,7 @@ if (isDesktop) {
       <p className="text-white" >*These are made up stats just for Demo</p>
       </div>
      </div>
-     <div ref={cardRef} className="lg:flex z-30 items-center hidden"><Standard imgl={'/rick.jpg'} data={data[0]} /></div>
+     <div ref={cardRef} className="lg:flex translate-x-100 opacity-0 z-30 items-center hidden"><Standard imgl={'/rick.jpg'} data={data[0]} /></div>
      </div>
     </>
   )

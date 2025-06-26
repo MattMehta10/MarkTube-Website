@@ -128,11 +128,12 @@ const Wrapper = ({children}) => {
   },
 
 ]
-
+const [showLogin, setShowLogin] = useState(false);
+const [Notifshow, setNotifshow] = useState(false);
 const [users, setusers] = useState([]);
 
 const contextData={
-  users,setusers,data
+  users,setusers,data,showLogin,setShowLogin,Notifshow,setNotifshow
 }
   return (
   <MyContext.Provider value={contextData}>

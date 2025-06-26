@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FiSun } from "react-icons/fi";
 import { HiMiniUserCircle } from "react-icons/hi2";
@@ -7,11 +7,16 @@ import logo from '/logo.png'
 import { IoMdNotificationsOutline } from "react-icons/io";
 import HamburgerIcon from './Hamburger';
 import MobileSidebar from './MobileSidebar';
-
-
+import { AiOutlineMoon } from "react-icons/ai";
+import Login from './Login';
+import { MyContext } from '../Wrapper';
 
 const Nav = () => {
   
+
+  const { Notifshow, setNotifshow } = useContext(MyContext);
+  const { showLogin, setShowLogin } = useContext(MyContext);
+  const [theme, settheme] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   
   return (
@@ -41,10 +46,10 @@ const Nav = () => {
     </SpotlightCard>
     </div>
     <div className='flex fixed lg:right-8 right-3 mix-blend-difference lg:top-6 top-3 z-500 items-center gap-4 text-white text-[1.4em]' >
-      <div className='h-8 w-8 duration-300 ease-in-out flex items-center justify-center rotate-0 rounded-full relative hover:bg-gray-800'><IoMdNotificationsOutline />
+      <div className='h-8 w-8 duration-300 ease-in-out flex items-center justify-center rotate-0 rounded-full relative hover:bg-gray-800' onClick={()=>{setNotifshow(!Notifshow)}}><IoMdNotificationsOutline />
       <div className='w-[6px] h-[6px] absolute right-1 top-1 bg-red-500 animate-ping z-20 rounded-full' ></div></div>
-      <div className='h-8 w-8 z-500  duration-300 ease-in-out flex items-center justify-center rotate-0 rounded-full hover:bg-gray-800 hover:rotate-30'><FiSun /></div>
-    <div className='h-8 w-8 duration-300 ease-in-out flex items-center justify-center rounded-full hover:bg-gray-800'><HiMiniUserCircle/></div>
+      <div className='h-8 w-8 z-500  duration-300 ease-in-out flex items-center justify-center rotate-0 rounded-full hover:bg-gray-800 hover:rotate-30' onClick={()=>{settheme(!theme)}}>{theme?<FiSun/>:<AiOutlineMoon/>}</div>
+    <div className='h-8 w-8 duration-300 z-300 ease-in-out flex items-center justify-center rounded-full hover:bg-gray-800'  onClick={()=>{setShowLogin(!showLogin)}} ><HiMiniUserCircle/></div>
     </div>
     
   </div>

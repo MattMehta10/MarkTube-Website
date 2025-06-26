@@ -1,87 +1,156 @@
-import { nanoid } from 'nanoid';
-import React, { useContext, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { MyContext } from '../Wrapper';
+import React, { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
+import { nanoid } from "nanoid";
+import { MyContext } from "../Wrapper";
+import { FcGoogle } from "react-icons/fc";
+import { IoCloseSharp } from "react-icons/io5";
 
-const Login = () => {
-const {users,setusers} = useContext(MyContext);
-const [isMatched, setisMatched] = useState(true);
-const [isUEmpty, setisUEmpty] = useState(false);
-const [isPEmpty, setisPEmpty] = useState(false);
-const [isEEmpty, setisEEmpty] = useState(false);
-const{register,handleSubmit,reset}=useForm();
-const submitHandler = (userdata) => {
-    const username = (userdata.username || '').trim();
-    const password = (userdata.password || '').trim();
-    const repassword = (userdata.repassword || '').trim();
-    const email = (userdata.email || '').trim();
-    
-    const isUsernameEmpty = username === '';
-    const isPasswordEmpty = password === '';
-    const isEmailEmpty = email === '';
+const Login = ({status,setstatus}) => {
+  const { users, setusers } = useContext(MyContext);
+  const { showLogin,setShowLogin } = useContext(MyContext);
+  const [isMatched, setisMatched] = useState(true);
+  const [isUEmpty, setisUEmpty] = useState(false);
+  const [isPEmpty, setisPEmpty] = useState(false);
+  const [isEEmpty, setisEEmpty] = useState(false);
+  const [weakPassword, setWeakPassword] = useState(false);
+
+  const { register, handleSubmit, reset } = useForm();
+
+  const isWeakPassword = (password) => {
+    if (password.length < 6) return true;
+    const isAlpha = /^[a-zA-Z]+$/.test(password);
+    const isNumeric = /^[0-9]+$/.test(password);
+    return isAlpha || isNumeric;
+  };
+
+  const submitHandler = (userdata) => {
+    const username = (userdata.username || "").trim();
+    const password = (userdata.password || "").trim();
+    const repassword = (userdata.repassword || "").trim();
+    const email = (userdata.email || "").trim();
+
+    const isUsernameEmpty = username === "";
+    const isPasswordEmpty = password === "";
+    const isEmailEmpty = email === "";
     const isPasswordMatch = password === repassword;
-    
+
     setisUEmpty(isUsernameEmpty);
     setisPEmpty(isPasswordEmpty);
     setisEEmpty(isEmailEmpty);
-    
+
     if (isUsernameEmpty || isPasswordEmpty || isEmailEmpty) {
-        setisMatched(true); // Avoid showing mismatch if fields are empty
-        return;
+      setisMatched(true);
+      return;
     }
-    
-    if (isPasswordMatch) {
-        setisMatched(true);
-        const copy={username: userdata.username,password:userdata.password}
-        copy.id=nanoid();
-        setusers([...users,copy])
-        reset();
-    } else {
-        setisMatched(false);
+
+    const weak = isWeakPassword(password);
+    setWeakPassword(weak);
+
+    if (!isPasswordMatch) {
+      setisMatched(false);
+      return;
     }
+
+    if (weak) return;
+
+    const copy = { id: nanoid(), username, password, email };
+    setusers([...users, copy]);
+    reset();
+    setWeakPassword(false);
+    setisMatched(true);
+  };
+
+  const handleGoogleLogin = () => {
+    alert("Google login (frontend-only placeholder)");
+  };
+
+  return (showLogin?(<>
+    <div className="fixed inset-0 flex items-center justify-center backdrop-blur-lg bg-black/40 z-10250 p-4" onClick={() => setShowLogin(!showLogin)}>
+      <div className="w-full relative max-w-md bg-zinc-900 text-white shadow-xl rounded-2xl p-8 space-y-5">
+    <div className="absolute right-5 top-5" onClick={()=>{setShowLogin(false)}}><IoCloseSharp className="text-xl cursor-pointer" /></div>
+        <h2 className="text-2xl font-bold text-center text-white">Sign In to MarkTube</h2>
+        <form onSubmit={handleSubmit(submitHandler)} className="space-y-4">
+          {/* Username */}
+          <div>
+            <label className="block text-sm font-medium">Username</label>
+            <input
+              {...register("username")}
+              className="mt-1 w-full px-4 py-2 bg-zinc-800 text-white border border-zinc-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+              type="text"
+              placeholder="Enter your username"
+            />
+            {isUEmpty && <p className="text-sm text-red-400">Username cannot be empty</p>}
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-sm font-medium">Email</label>
+            <input
+              {...register("email")}
+              className="mt-1 w-full px-4 py-2 bg-zinc-800 text-white border border-zinc-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+              type="email"
+              placeholder="you@example.com"
+            />
+            {isEEmpty && <p className="text-sm text-red-400">Email cannot be empty</p>}
+          </div>
+
+          {/* Password */}
+          <div>
+            <label className="block text-sm font-medium">Password</label>
+            <input
+              {...register("password")}
+              className="mt-1 w-full px-4 py-2 bg-zinc-800 text-white border border-zinc-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+              type="password"
+              placeholder="Password"
+            />
+            {isPEmpty && <p className="text-sm text-red-400">Password cannot be empty</p>}
+            {weakPassword && <p className="text-sm text-yellow-400">⚠️ Weak password (use mix of letters & numbers)</p>}
+          </div>
+
+          {/* Confirm Password */}
+          <div>
+            <label className="block text-sm font-medium">Confirm Password</label>
+            <input
+              {...register("repassword")}
+              className="mt-1 w-full px-4 py-2 bg-zinc-800 text-white border border-zinc-700 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+              type="password"
+              placeholder="Confirm your password"
+            />
+            {!isMatched && <p className="text-sm text-red-400">Passwords do not match</p>}
+          </div>
+
+          {/* Submit */}
+          <button
+            type="submit"
+            className="w-full bg-green-500 cursor-pointer hover:bg-green-600 text-white font-semibold py-2 rounded-md transition duration-300"
+          >
+            Register
+          </button>
+        </form>
+
+        <div className="flex items-center justify-center text-zinc-400">— OR —</div>
+
+        {/* Google Login */}
+        <button
+          onClick={handleGoogleLogin}
+          className="w-full flex items-center cursor-pointer justify-center border border-zinc-600 py-2 rounded-md hover:bg-zinc-800 transition"
+        >
+          <FcGoogle className="text-xl mr-2" />
+          Continue with Google
+        </button>
+
+        {/* User List */}
+        <div className="mt-4">
+          <h3 className="text-sm font-semibold text-zinc-400 mb-1">Registered Users:</h3>
+          <ul className="list-disc list-inside text-sm text-zinc-300">
+            {users.map((user, idx) => (
+              <li key={user.id}>{user.username}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div></>
+  ):<></>);
 };
 
-
-  return (
-    <><div className='w-150 absolute bg-amber-300 h-180 p-5'>
-    <form onSubmit={handleSubmit(submitHandler)} className='text-white flex gap-2 flex-col  bg-blue-950  p-5' action="">
-        <div className='flex flex-col gap-2'>
-        <p>Username: </p>
-        <input className='bg-white text-black'
-        {...register("username")}
-        type="text" 
-        placeholder='username'/>
-        <small className={isUEmpty?`text-red-500`:`hidden`}>username cannot be empty</small>
-        </div>
-        <div className='flex flex-col gap-2'>
-        <p>Email: </p>
-        <input className='bg-white text-black'
-        {...register("email")}
-        type="text" 
-        placeholder='Email ID'/>
-        <small className={isEEmpty?`text-red-500`:`hidden`}>Email cannot be empty</small>
-        </div>
-        <div  className='flex flex-col gap-2'>
-        <p>Password:</p> 
-        <input className='bg-white text-black'
-        {...register("password")}
-        type="text" 
-        placeholder='Password'/>
-        <small className={isPEmpty?`text-red-500`:`hidden`}>username cannot be empty</small>
-        </div>
-        <div className='flex flex-col gap-2'>
-        <p>ReEnter Password:</p> 
-        <input className='bg-white text-black'
-        {...register("repassword")}
-        type="text" 
-        placeholder='Reenter Password'/>
-        <small className= {isMatched?`hidden`: `text-red-500`}>Password doesn't match.</small>
-        <button className='bg-yellow-300 py-1 px-3 active:scale-95' >Login</button>
-        <div>{users.map((elem,idx)=><h1>{`${idx+1})${elem.username}`}</h1>)}</div>
-        </div>
-    </form></div>
-    </>
-  )
-}
-
-export default Login
+export default Login;
