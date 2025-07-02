@@ -110,7 +110,7 @@ if (isDesktop) {
     
     const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'public/MarkTube-YouTube-Manager.zip'; // Relative to public folder
+    link.href = 'https://github.com/MattMehta10/MarkTube-YouTube-Manager/archive/refs/heads/main.zip'; // Relative to public folder
     link.download = 'MarkTube-YouTube-Manager.zip'; // Optional: customize file name
     document.body.appendChild(link);
     link.click();
