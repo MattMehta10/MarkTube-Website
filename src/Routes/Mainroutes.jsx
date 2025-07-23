@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import App from '../App'
-import About from '../components/About'
 import Pricing from '../components/Pricing'
 import Blog from '../components/Blog'
 import Workspace from '../components/Workspace'
