@@ -1,0 +1,268 @@
+{
+  "watched": [
+    {
+      "type": "watched",
+      "addedAt": 1753387795590,
+      "videoId": "B-4eN1Pb7qo",
+      "title": "🚀 Three.JS – Learn What Matters: Elevate Your Web Game! 🌐",
+      "channel": "Sheryians Coding School",
+      "thumbnail": "https://i.ytimg.com/vi/B-4eN1Pb7qo/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAUYlReVpycWeJgylA0_iq1sVmsDw",
+      "_id": "video_B-4eN1Pb7qo",
+      "_rev": "3-3ff715dafba81c48e8f673cf82c2472a"
+    },
+    {
+      "type": "watched",
+      "addedAt": 1753387378054,
+      "videoId": "JALCoY9MQg8",
+      "title": "Framer Motion Tutorial – Master React Animations (Beginner to Advanced)",
+      "channel": "Sheryians Coding School",
+      "thumbnail": "https://i.ytimg.com/vi/JALCoY9MQg8/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDgRy33SReFaXXpV_l_jlYJQC8RbA",
+      "_id": "video_JALCoY9MQg8",
+      "_rev": "1-0e141590c27e0e57a26735dd22ef46d3"
+    },
+    {
+      "type": "watched",
+      "addedAt": 1753387506077,
+      "videoId": "QFlijeqPJ_4",
+      "title": "Dandadan: A Totally Blind Review",
+      "channel": "Unknown",
+      "thumbnail": "https://i.ytimg.com/vi/QFlijeqPJ_4/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBJx9dGZ8fi9EgBfZ_6ABFdRF4OMA",
+      "_id": "video_QFlijeqPJ_4",
+      "_rev": "1-60276d1881af5c53b7aa4a519c418cb1"
+    },
+    {
+      "type": "watched",
+      "addedAt": 1753387216229,
+      "videoId": "jlqaAW9YojA",
+      "title": "Rive 101 - 4.0 Animating in Rive Intro",
+      "channel": "Rive",
+      "thumbnail": "https://i.ytimg.com/vi/jlqaAW9YojA/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAWkYHHnekOnFmakx971VXT2QcfvQ",
+      "_id": "video_jlqaAW9YojA",
+      "_rev": "1-870290acca39e3489d461d3762a84825"
+    },
+    {
+      "type": "watched",
+      "addedAt": 1753387210851,
+      "videoId": "s9x35tPmEZs",
+      "title": "Rive 101 - 3.7 Groups and Parent/Child relationships",
+      "channel": "Rive",
+      "thumbnail": "https://i.ytimg.com/vi/s9x35tPmEZs/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAcoCWkDrVCuKaXKgCosB3KAWjgKw",
+      "_id": "video_s9x35tPmEZs",
+      "_rev": "1-75b9493c784f595e81c8656a99bb7767"
+    }
+  ],
+  "important": [
+    {
+      "type": "important",
+      "addedAt": 1753387600533,
+      "videoId": "-fY-_Djfu7A",
+      "title": "This Stupid TRICK Helped Me Play In Every Key On Guitar",
+      "channel": "Ricky Comiskey",
+      "thumbnail": "https://i.ytimg.com/vi/-fY-_Djfu7A/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCp37UqsPwa7QVXi8MwwrvZ4_SIPg",
+      "_id": "video_-fY-_Djfu7A",
+      "_rev": "1-f0ad34311d3c658d0942d9088bb8e2f7"
+    },
+    {
+      "type": "important",
+      "addedAt": 1753387707940,
+      "videoId": "1aR7tcmWo_w",
+      "title": "Part 2 – Master JavaScript & Become a Real Developer | Full Course",
+      "channel": "Sheryians Coding School",
+      "thumbnail": "https://yt3.ggpht.com/t8z86Svc4diX-k6VHCZ7AY0EFgVin91qLZigPwJLnavVaB0YPa0etWa-c7bG1BUEcbB4U4im=s88-c-k-c0x00ffffff-no-rj",
+      "_id": "video_1aR7tcmWo_w",
+      "_rev": "7-9f5af2642e0da6e8628f855424728f40"
+    },
+    {
+      "type": "important",
+      "addedAt": 1753387279064,
+      "videoId": "EaG3Zd04W5s",
+      "title": "[ GAMECHANGER 🚀 ] REACT JS BECOMES 100 TIMES EASY IF YOU FOLLOW THIS.",
+      "channel": "Sheryians Coding School",
+      "thumbnail": "https://i.ytimg.com/vi/EaG3Zd04W5s/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAv4cOeTIm86OtkD9AQyqeInKH6iQ",
+      "_id": "video_EaG3Zd04W5s",
+      "_rev": "1-ab54b93eea8a939405377b8c1492f9df"
+    },
+    {
+      "type": "important",
+      "addedAt": 1753387881213,
+      "videoId": "WOB7mNFASTI",
+      "title": "Three js Complete Course for Beginners in Hindi | Free Code",
+      "channel": "Monk Jha",
+      "thumbnail": "https://i.ytimg.com/vi/WOB7mNFASTI/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBp_xeR0ppFGK3GcVI-iBANcJYtNQ",
+      "_id": "video_WOB7mNFASTI",
+      "_rev": "1-8b0f48fb5d4603e7b186b053ae0b72b3"
+    },
+    {
+      "type": "important",
+      "addedAt": 1753387944988,
+      "videoId": "eWnZVUXMq8k",
+      "title": "User and video model with hooks and JWT",
+      "channel": "Chai aur Code",
+      "thumbnail": "https://i.ytimg.com/vi/eWnZVUXMq8k/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB0Sx0NrLMUGKLOvrEMKrb63-mzCA",
+      "_id": "video_eWnZVUXMq8k",
+      "_rev": "1-f448be59ff9238a2f087cb9b7bc51f3d"
+    },
+    {
+      "type": "important",
+      "addedAt": 1753388006697,
+      "videoId": "pXJ2qoGU88g",
+      "title": "Clone Projects won't get you Hired in 2025! | AI, DeFi, Web 3 and Full stack Project Ideas",
+      "channel": "Unknown",
+      "thumbnail": "https://i.ytimg.com/vi/pXJ2qoGU88g/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCbcTb4MB06dtW-3aFpRsVgEaUgiw",
+      "_id": "video_pXJ2qoGU88g",
+      "_rev": "1-8326dad401de9f1a47edd5a895411db5"
+    },
+    {
+      "type": "important",
+      "addedAt": 1753387884835,
+      "videoId": "xAzODSYIbRs",
+      "title": "[🚀Three.js Project] Modern Full Screen Navbar with Three.js and GLSL",
+      "channel": "Sheryians Coding School",
+      "thumbnail": "https://i.ytimg.com/vi/xAzODSYIbRs/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBA6rEqBsjPWU9RXz8F9cxsExJ3BA",
+      "_id": "video_xAzODSYIbRs",
+      "_rev": "1-ac69f3eebf116c07a22013a888fe5bc4"
+    },
+    {
+      "type": "important",
+      "addedAt": 1753387905761,
+      "videoId": "yi2En8QgiQU",
+      "title": "Ear Training — #1 Exercise to Recognize Notes Instantly",
+      "channel": "Use Your Ear",
+      "thumbnail": "https://i.ytimg.com/vi/yi2En8QgiQU/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCYaf2b9tfdu8dI2jgIz-eV93V09w",
+      "_id": "video_yi2En8QgiQU",
+      "_rev": "1-133982de4f19194320794201a76d1a76"
+    }
+  ],
+  "toWatch": [
+    {
+      "type": "toWatch",
+      "addedAt": 1753387305227,
+      "videoId": "485YO0ukszU",
+      "title": "Guitar Lesson 7 - Master F CHORD For Beginners - 2 WAYS | Beginner Guitar Lesson | @Siffguitar",
+      "channel": "SIFF Guitar",
+      "thumbnail": "https://i.ytimg.com/vi/485YO0ukszU/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLC9qi4F8R-u3B7hkkqFUAzN_9OPDw",
+      "_id": "video_485YO0ukszU",
+      "_rev": "1-0b4363957b28a3edf88f5612db2af2aa"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387586106,
+      "videoId": "9VlvbpXwLJs",
+      "title": "30 Years of Business Knowledge in 2hrs 26mins",
+      "channel": "Simon Squibb",
+      "thumbnail": "https://i.ytimg.com/vi/9VlvbpXwLJs/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCQ_55X3ufw50pET7pwvoSTOPNQbw",
+      "_id": "video_9VlvbpXwLJs",
+      "_rev": "1-e1b842376ddb4a1d5da9324dc15700f7"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387526218,
+      "videoId": "9ngnCrBKWZA",
+      "title": "This is EVERYTHING YOU NEED to Know About Cars",
+      "channel": "Unknown",
+      "thumbnail": "https://i.ytimg.com/vi/9ngnCrBKWZA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAr9ZE2mlHTbzp2a5EekGD7OZ_3IA",
+      "_id": "video_9ngnCrBKWZA",
+      "_rev": "3-2b69afc4fc4f0194e096237d9a858560"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387248221,
+      "videoId": "9qQ8WxF-h8o",
+      "title": "[PROCESS BRAKDOWN] React Three Fiber | Cylinder Work Showcase",
+      "channel": "Sheryians Coding School",
+      "thumbnail": "https://i.ytimg.com/vi/9qQ8WxF-h8o/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDASHmpMkK9la-UwdDFCIR25dcLPw",
+      "_id": "video_9qQ8WxF-h8o",
+      "_rev": "3-757d5082a30649fcbf296630376d1015"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387251764,
+      "videoId": "AZXYSlxj0vU",
+      "title": "ReactJS | Modern Animated Website | OCHI DESIGN | Awwwarded Website Clone",
+      "channel": "Sheryians Coding School",
+      "thumbnail": "https://i.ytimg.com/vi/AZXYSlxj0vU/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAj4RTPXlO-1i3kDCWgIZboJUoIHA",
+      "_id": "video_AZXYSlxj0vU",
+      "_rev": "1-e101546b0c797db1c1c8510a11dc63a0"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387338563,
+      "videoId": "GowPe3iiqTs",
+      "title": "Mastering Next.js 14: A Comprehensive Guide to the Latest Features and Advanced Concepts!",
+      "channel": "HuXn WebDev",
+      "thumbnail": "https://i.ytimg.com/vi/GowPe3iiqTs/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAT-EGBhAXkVgJpvN_BmoCP1oVzsw",
+      "_id": "video_GowPe3iiqTs",
+      "_rev": "1-6d571f451034d4b1102fe8c9278d8e11"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387309767,
+      "videoId": "H8G8JnH_mmE",
+      "title": "Guitar Lesson 8 - Beautiful MINOR CHORD Progressions 🎸 | Beginner Guitar Lesson |  @Siffguitar",
+      "channel": "SIFF Guitar",
+      "thumbnail": "https://i.ytimg.com/vi/H8G8JnH_mmE/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLC4zrVRWxsSmlyaG2Pl7zVMgZAPwQ",
+      "_id": "video_H8G8JnH_mmE",
+      "_rev": "1-1ca61eb19ac4a8591dc0f5136735209f"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1751725019190,
+      "videoId": "b7a_Y1Ja6js",
+      "title": "Build a 3D Book Slider Landing Page with Three.js & React",
+      "channel": "Wawa Sensei",
+      "thumbnail": "https://i.ytimg.com/vi/b7a_Y1Ja6js/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDmOajiPiBCHQCUShaeX4Ld7MJgfQ",
+      "_id": "video_b7a_Y1Ja6js",
+      "_rev": "1-a0ec21656ff34f91b242877f0fdd013f"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753285661085,
+      "videoId": "i4b_ETwPoTE",
+      "title": "A BookMyShow case study for developer",
+      "channel": "Unknown",
+      "thumbnail": "https://i.ytimg.com/vi/i4b_ETwPoTE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDxwRJQah_z2n01SjYornyLc7fvsQ",
+      "_id": "video_i4b_ETwPoTE",
+      "_rev": "1-8acb0f8f60e8f44b6eebae40a5e41e2c"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387477618,
+      "videoId": "isfmLaM07UI",
+      "title": "Is Vibe Coding Dead? #tanaypratap",
+      "channel": "Unknown",
+      "thumbnail": "https://i.ytimg.com/vi/isfmLaM07UI/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAEpaIa9wuFCfzpb1XX-Vd-nKO7Wg",
+      "_id": "video_isfmLaM07UI",
+      "_rev": "1-b984336ba0a118bb047fae431de2a8eb"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387512531,
+      "videoId": "l0aI8Ecumy8",
+      "title": "EASY React Animation with useGSAP()",
+      "channel": "Unknown",
+      "thumbnail": "https://i.ytimg.com/vi/l0aI8Ecumy8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDgsL_5zc43IqyNNmTGYywmoTiWbQ",
+      "_id": "video_l0aI8Ecumy8",
+      "_rev": "1-d5346c78166e5d8c34243636a5167e85"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1752168419887,
+      "videoId": "l8X9nhgZyoA",
+      "title": "Chai aur Recursion",
+      "channel": "Chai aur Code",
+      "thumbnail": "https://i.ytimg.com/vi/l8X9nhgZyoA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCavVEjO42YM-EBCijwcKmEXZIVpw",
+      "_id": "video_l8X9nhgZyoA",
+      "_rev": "1-a220c4dd894c51a890c0c117ae561824"
+    },
+    {
+      "type": "toWatch",
+      "addedAt": 1753387593662,
+      "videoId": "sf-RI1YPvqY",
+      "title": "Get FASTER Fingers In 1 WEEK - #1 Finger Exercise for Guitar",
+      "channel": "Lauren Bateman",
+      "thumbnail": "https://i.ytimg.com/vi/sf-RI1YPvqY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFB1KLXd1AeMR1TIjzhzYEzZRMqQ",
+      "_id": "video_sf-RI1YPvqY",
+      "_rev": "1-6c44f7e286b48f08668429b699d65e86"
+    }
+  ]
+}

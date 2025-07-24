@@ -13,10 +13,9 @@ import { MyContext } from '../Wrapper';
 
 const Nav = () => {
   
-
   const { Notifshow, setNotifshow } = useContext(MyContext);
   const { showLogin, setShowLogin } = useContext(MyContext);
-  const [theme, settheme] = useState(true);
+  const {theme,settheme} = useContext(MyContext);
   const [isOpen, setIsOpen] = useState(false);
   
   return (

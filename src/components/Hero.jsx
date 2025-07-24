@@ -46,18 +46,6 @@ useGSAP(() => {
     (context) => {
       const { isDesktop, isMobile } = context.conditions;
 
-if (isDesktop) {
-
-    }
-
-      if (isMobile) {
-        gsap.from("#marktube", {
-          x: -100,
-          opacity:0,
-          duration: 1.5,
-          ease: "power2.out",
-        });
-      }
 
       return () => console.log("cleaned responsive animations");
     }
@@ -66,19 +54,19 @@ if (isDesktop) {
   const t1= gsap.timeline();
   t1.from(bgRef.current, {
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
     ease: "power2.out",
   })
   .from(cardRef.current, {
     x: 100,
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
     ease: "power2.out",
   },"entry")
    .from("#marktube", {
     x: -100,
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
     ease: "power2.out",
   },"entry")
   .from(".hometext", {

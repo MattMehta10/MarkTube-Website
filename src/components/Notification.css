@@ -1,0 +1,8 @@
+/* Add to your global CSS */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: transparent;
+}

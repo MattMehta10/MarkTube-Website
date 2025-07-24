@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 export const MyContext = createContext();
+import Libdata from '../public/marktube_backup_1753388036672.json'; // Adjust path if needed
 
 const Wrapper = ({children}) => {
     let data=[{
@@ -131,9 +132,9 @@ const Wrapper = ({children}) => {
 const [showLogin, setShowLogin] = useState(false);
 const [Notifshow, setNotifshow] = useState(false);
 const [users, setusers] = useState([]);
-
+const [theme,settheme] = useState(false)
 const contextData={
-  users,setusers,data,showLogin,setShowLogin,Notifshow,setNotifshow
+  users,setusers,data,showLogin,setShowLogin,Notifshow,setNotifshow,theme,settheme,Libdata
 }
   return (
   <MyContext.Provider value={contextData}>

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import App from '../App'
-import Pricing from '../components/Pricing'
-import Blog from '../components/Blog'
-import Workspace from '../components/Workspace'
-import CookiePolicy from '../components/CookiePolicy'
-import PrivacyPolicy from '../components/PrivacyPolicy'
-import TermsOfService from '../components/TermsOfService'
-import FAQ from '../components/FAQ'
+import Pricing from '../Routes/Pricing'
+import Blog from '../Routes/Blog'
+import Workspace from '../Routes/Workspace'
+import CookiePolicy from '../Routes/CookiePolicy'
+import PrivacyPolicy from '../Routes/PrivacyPolicy'
+import TermsOfService from '../Routes/TermsOfService'
+import FAQ from './FAQ'
 
 const Mainroutes = () => {
   return (
