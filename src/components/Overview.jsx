@@ -2,13 +2,15 @@ import React, { useContext, useState } from 'react'
 import { MyContext } from '../Wrapper';
 import Lottie from 'lottie-react';
 import animationdata from '../assets/Streak Fire.json'
+import { motion } from 'motion/react';
+
 const Overview = ({watchNext,importantItems}) => {
       const [streak, setStreak] = useState(5);
       const {Libdata} = useContext(MyContext);
   return (
     <>
             {/* Analytics Section */}
-            <section className="grid grid-cols-2 lg:grid-cols-4 relative gap-y-3 lg:gap-6 mb-4">
+            <motion.section initial={{opacity:0}} animate={{opacity:1}} transition={{duration:.8,delay:.2}} className="grid grid-cols-2 lg:grid-cols-4 relative gap-y-3 lg:gap-6 mb-4">
                 <div className='text-white absolute top-0 lg:relative font-bold lg:w-61 lg:h-20 lg:text-[23px] items-center flex p-2'>
         <h1 id='greeting'>Hey Yash! <br className='hidden lg:block' /> how are you today</h1>
       </div>
@@ -44,12 +46,12 @@ const Overview = ({watchNext,importantItems}) => {
                 <h4 className="text-lg mb-2 font-bold text-white">Activity</h4>
                 <p className="text-white">📊 Weekly Progress</p>
               </div>
-            </section>
+            </motion.section>
 
   <div className='flex font-extrabold relative font-[gilroy] flex-col gap-5 w-full h-100 p-5 items-start rounded-2xl border border-gray-50/12 bg-radial from-gray-700/30 from-10% to-gray-950/30'>
       
       {/* 📺 To Watch */}
-      <div className='w-full'>
+      <motion.div initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.5,delay:.5}} className='w-full'>
         <h1 className='pl-2'>Want to Watch Next</h1>
         <div className="mt-2 w-full lg:w-300 h-35 border border-gray-50/12 rounded-3xl overflow-hidden">
           <div id='watchnextcontainer' className="flex flex-nowrap overflow-x-auto gap-4 p-3 scroll-smooth">
@@ -57,7 +59,10 @@ const Overview = ({watchNext,importantItems}) => {
             watchNext.length > 0 ? 
             (
               watchNext.map((video)=>  (
-                <a
+                <motion.a
+                initial={{opacity:0 ,x:30}}
+                animate={{opacity:1, x:0}}
+                transition={{duration:.5, delay:.5}}
                   key={video._id}
                   href={`https://www.youtube.com/watch?v=${video.videoId}`}
                   target="_blank"
@@ -78,7 +83,7 @@ const Overview = ({watchNext,importantItems}) => {
   }}>
     {video.title}
     </p>
-                </a>
+                </motion.a>
                 
               ))
             ) 
@@ -88,10 +93,10 @@ const Overview = ({watchNext,importantItems}) => {
             }
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* 🧠 Important */}
-      <div className='w-full'>
+      <motion.div initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.5,delay:.5}} className='w-full'>
         <h1 className='pl-2'>Revisiting the Important Videos</h1>
         <div className="mt-2 w-full h-35 border border-gray-50/12 rounded-3xl overflow-hidden">
           <div id='impcontainer' className="flex flex-nowrap overflow-x-auto gap-4 p-3 scroll-smooth">
@@ -100,7 +105,10 @@ const Overview = ({watchNext,importantItems}) => {
             (
                 importantItems.map((video) =>
                  (
-                <a
+                <motion.a
+                initial={{opacity:0 ,x:30}}
+                animate={{opacity:1, x:0}}
+                transition={{duration:.5, delay:.5}}
                   key={video._id}
                   href={`https://www.youtube.com/watch?v=${video.videoId}`}
                   target="_blank"
@@ -121,7 +129,7 @@ const Overview = ({watchNext,importantItems}) => {
   }}>
     {video.title}
     </p>
-                </a>
+                </motion.a>
               ))
             ) 
             :(
@@ -130,7 +138,7 @@ const Overview = ({watchNext,importantItems}) => {
             }
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
           </>
   )

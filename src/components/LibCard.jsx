@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import React, { useEffect, useState } from 'react';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 import { MdVerified } from 'react-icons/md';
@@ -16,7 +17,10 @@ const LibCard = ({data, type, size }) => {
 
 
   return (
-    <div
+    <motion.div
+    initial={{opacity:0 ,x:30}}
+                animate={{opacity:1, x:0}}
+                transition={{duration:.5, delay:.5}}
       key={1}
       className={`bg-gradient-to-tr transition-all duration-500 ease-in-out from-70% from-transparent to-85% ${bg(type)} relative border-2 border-gray-500/30 w-80 lg:w-55 whitespace-pre-wrap aspect-video flex lg:flex-col lg:gap-0 gap-1 items-start rounded-2xl h-20 lg:h-40 lg:hover:scale-102 lg:hover:w-55 text-white`}
     > 
@@ -44,7 +48,7 @@ const LibCard = ({data, type, size }) => {
           </p>
         </div>
       </div></div>
-</div>
+</motion.div>
   );
 };
 

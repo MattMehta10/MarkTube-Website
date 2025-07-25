@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import SpotlightCard from "../assets/Components/SpotlightCard/SpotlightCard";
 import Aurora from "../assets/Backgrounds/Aurora/Aurora"
+import { motion } from "motion/react";
 
 
 
@@ -60,7 +61,7 @@ const pricing = {
     </div>
       <h2 className="text-3xl z-50 font-extrabold mb-2 tracking-tight">Pricing Plans</h2>
       <p className="mb-8 z-50 text-gray-400 text-lg">Choose the plan that fits your workflow</p>
-      <div className="w-80 lg:w-full lg:max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
+      <motion.div initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.5,delay:.5}}  className="w-80 lg:w-full lg:max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
         {planOrder.map((key) => {
           const plan = pricing.plans[key];
           const isCurrent = pricing.currentPlan === key;
@@ -126,7 +127,7 @@ const pricing = {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
         </>
   );

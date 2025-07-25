@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { IoIosArrowForward } from "react-icons/io";
 import { MyContext } from '../Wrapper';
+import { motion } from 'motion/react';
 
 // Toggle Component
 const Toggle = ({ checked, onChange }) => (
@@ -110,7 +111,7 @@ const Setting = () => {
   ];
 
   return (
-    <div className="w-full h-fit overflow-hidden px-4 md:px-8 py-6 font-[gilroy] text-white transition-all duration-300">
+    <motion.div initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.1,delay:.3}}  className="w-full h-fit overflow-hidden px-4 md:px-8 py-6 font-[gilroy] text-white transition-all duration-300">
 
       <div className="grid md:grid-cols-2 gap-6">
         {settingsSections.map(section => {
@@ -148,7 +149,7 @@ const Setting = () => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

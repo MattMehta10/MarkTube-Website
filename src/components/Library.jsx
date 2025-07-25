@@ -3,6 +3,7 @@ import LibCard from './LibCard'; // Make sure this exists
 import { GoSortAsc, GoSortDesc } from 'react-icons/go';
 import { MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 import { MyContext } from '../Wrapper';
+import { motion } from 'motion/react';
 
 const Library = () => {
   // Flatten all videos into one array
@@ -32,7 +33,7 @@ const Library = () => {
   const paginated = filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   return (
-    <div className='lg:p-6 flex flex-col items-center'>
+    <motion.div initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.5,delay:.5}} className='lg:p-6 flex flex-col items-center'>
       <div className='w-full'>
         <h1 className='font-extrabold text-2xl'>All Videos</h1>
 
@@ -104,7 +105,7 @@ const Library = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

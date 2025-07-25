@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import React from 'react';
 
 const blogs = [
@@ -30,7 +31,7 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-[#10121b] via-[#181a20] to-[#0e1016] text-white px-4 sm:px-6 lg:px-8 py-12 font-sans">
+    <div className="min-h-screen w-full text-white px-4 sm:px-6 lg:px-8 py-12 font-sans">
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-lg">
           MarkTube Blog
@@ -40,11 +41,11 @@ const Blog = () => {
         </p>
       </div>
 
-      <div className="space-y-12">
+      <motion.div initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.5,delay:.5}}  className="space-y-12">
         {blogs.map((blog, idx) => (
           <article
             key={idx}
-            className="bg-[#1c1e26] border-l-4 border-emerald-400/60 hover:border-emerald-300/90 rounded-2xl shadow-xl hover:shadow-emerald-900/30 transition-transform transform hover:scale-[1.015] p-8 sm:p-10"
+            className="bg-[#1c1e26]  border-l-4 border-emerald-400/60 hover:border-emerald-300/90 rounded-2xl shadow-xl hover:shadow-emerald-900/30 transition-transform transform hover:scale-[1.015] p-8 sm:p-10"
           >
             <h2 className="text-2xl sm:text-3xl font-bold mb-2">{blog.title}</h2>
             <div className="flex items-center flex-wrap gap-2 text-sm text-gray-400 mb-4">
@@ -58,7 +59,7 @@ const Blog = () => {
             </div>
           </article>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
