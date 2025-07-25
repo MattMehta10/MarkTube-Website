@@ -43,7 +43,7 @@ const UIShowcase = () => {
             scrollTrigger: {
               trigger: '#imgsection',
               start: 'top 50%',
-              markers:true
+              // markers:true
             }
           });
           gsap.from([ img2Ref.current], {
