@@ -20,7 +20,7 @@ const Nav = () => {
   
   return (
   <>
-  <div className='bg-transparent z-5000 flex h-18 lg:pl-8 pl-4 pr-8 lg:pt-0 justify-between lg:items-center pt-3'>
+  <div className='bg-transparent z-400 flex h-18 lg:pl-8 pl-4 pr-8 lg:pt-0 justify-between lg:items-center pt-3'>
     <button className='text-white z-505 fixed mix-blend-difference lg:hidden' ><h1><HamburgerIcon isOpen={isOpen} onClick={() => setIsOpen(prev => !prev)} /></h1></button>
     <MobileSidebar isOpen={isOpen} setIsOpen={setIsOpen} />
        <h1 className='text-white z-100 lg:flex items-center gap-2 text-xl font-extrabold font-[gilroy] hidden'><img className='h-7' src={logo}/>MarkTube</h1>
@@ -40,14 +40,14 @@ const Nav = () => {
       </NavLink>
       <NavLink className={(e) => e.isActive ? "text-green-400  duration-300 ease-in" : "hover:text-green-300"}
         to="/Blog">
-        <h1>Blog</h1>
+        <h1>About</h1>
       </NavLink>
     </SpotlightCard>
     </div>
-    <div className='flex fixed lg:right-8 right-3 mix-blend-difference lg:top-6 top-3 z-500 items-center gap-4 text-white text-[1.4em]' >
+    <div className='flex fixed lg:right-8 right-3 mix-blend-difference lg:top-6 top-3 z-400 items-center gap-4 text-white text-[1.4em]' >
       <div className='h-8 w-8 duration-300 ease-in-out flex items-center justify-center rotate-0 rounded-full relative hover:bg-gray-800' onClick={()=>{setNotifshow(!Notifshow)}}><IoMdNotificationsOutline />
       <div className='w-[6px] h-[6px] absolute right-1 top-1 bg-red-500 animate-ping z-20 rounded-full' ></div></div>
-      <div className='h-8 w-8 z-500  duration-300 ease-in-out flex items-center justify-center rotate-0 rounded-full hover:bg-gray-800 hover:rotate-30' onClick={()=>{settheme(!theme)}}>{theme?<FiSun/>:<AiOutlineMoon/>}</div>
+      {/* <div className='h-8 w-8 z-400  duration-300 ease-in-out flex items-center justify-center rotate-0 rounded-full hover:bg-gray-800 hover:rotate-30' onClick={()=>{settheme(!theme)}}>{theme?<FiSun/>:<AiOutlineMoon/>}</div> */}
     <div className='h-8 w-8 duration-300 z-300 ease-in-out flex items-center justify-center rounded-full hover:bg-gray-800'  onClick={()=>{setShowLogin(!showLogin)}} ><HiMiniUserCircle/></div>
     </div>
     

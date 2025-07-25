@@ -9,7 +9,6 @@ import Login from './components/Login.jsx'
 import Notification from './components/Notification.jsx'
 
 
-
 createRoot(document.getElementById('root')).render(<>
 <BrowserRouter>
  <Wrapper>

@@ -5,6 +5,7 @@ import { MdEmail, MdOutlineRocketLaunch } from "react-icons/md";
 import './Notification.css'
 const Notification = () => {
   const { Notifshow, setNotifshow } = useContext(MyContext);
+  
 
   const dummyNotifications = [
     {
@@ -47,11 +48,11 @@ const Notification = () => {
     <>
       {Notifshow && (
         <div
-          className="fixed top-14 right-35 z-[9999] flex items-start"
+          className="fixed lg:top-14 lg:right-25 top-15 right-5 lg:backdrop-blur-none backdrop-blur-2xl lg:h-auto lg:w-auto z-[9999] flex items-start"
           onClick={() => setNotifshow(false)}
         >
           <div
-            className="w-80 max-w-xs bg-[#111827] text-white rounded-2xl shadow-2xl border border-zinc-700 overflow-y-auto max-h-[70vh] relative scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent"
+            className="w-80 max-w-xs bg-[#111827] text-white rounded-2xl shadow-2xl border border-zinc-700 overflow-y-auto max-h-[80vh] relative scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}

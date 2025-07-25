@@ -1,100 +1,155 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react';
 import { IoIosArrowForward } from "react-icons/io";
+import { MyContext } from '../Wrapper';
+
+// Toggle Component
+const Toggle = ({ checked, onChange }) => (
+  <label className="relative inline-flex items-center cursor-pointer select-none">
+    <input
+      type="checkbox"
+      className="sr-only peer"
+      checked={checked}
+      onChange={onChange}
+    />
+    <div className="w-11 h-6 bg-gray-600 rounded-full peer peer-checked:bg-emerald-500 transition-colors duration-300"></div>
+    <div className="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform duration-300 transform peer-checked:translate-x-5"></div>
+  </label>
+);
+
 const Setting = () => {
-    const [openSection, setOpenSection] = useState(null);
+  const {showLogin, setShowLogin} = useContext(MyContext);
+  const [openSection, setOpenSection] = useState('profile');
+  const [theme, setTheme] = useState('System');
 
-  const handleToggle = (section) => {
-    setOpenSection(openSection === section ? null : section);
+  const toggleSection = (key) => {
+    setOpenSection(prev => (prev === key ? null : key));
   };
+
+  const settingsSections = [
+    {
+      key: 'profile',
+      title: 'Profile',
+      content: (
+        <div className="flex items-center gap-6">
+          <img className="rounded-full h-20 w-20 border-2 border-emerald-500 shadow" src="/Designer.jpeg" alt="Profile" />
+          <div>
+            <div className="font-semibold text-lg mb-1">Yash Mehta</div>
+            <div className="text-gray-400 text-sm mb-2">user@email.com</div>
+            <button onClick={()=>{setShowLogin(true)}} className="bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium shadow hover:bg-emerald-600 transition">Login</button>
+          </div>
+        </div>
+      )
+    },
+    {
+      key: 'data',
+      title: 'Data Control',
+      content: (
+        <div className="flex flex-col gap-4">
+          <div className="flex justify-between items-center">
+            <span>Download Data</span>
+            <button className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition">Download</button>
+          </div>
+          <div className="flex justify-between items-center">
+            <span>Delete Account</span>
+            <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">Delete</button>
+          </div>
+        </div>
+      )
+    },
+    {
+      key: 'look',
+      title: 'Look & Feel',
+      content: (
+        <div className="flex flex-col gap-4">
+          <div className="flex justify-between items-center">
+            <span>Sidebar Width</span>
+            <input type="range" min="200" max="500" className="w-32 accent-emerald-500" />
+          </div>
+          <div className="flex justify-between items-center">
+            <span>Font Size</span>
+            <input type="range" min="12" max="24" className="w-32 accent-emerald-500" />
+          </div>
+        </div>
+      )
+    },
+    {
+      key: 'theme',
+      title: 'Theme',
+      content: (
+        <div className="flex gap-3 flex-wrap">
+          {['Dark', 'Light', 'System'].map(t => (
+            <button
+              key={t}
+              onClick={() => setTheme(t)}
+              className={`px-4 py-2 rounded-lg border transition
+                ${theme === t ? 'bg-emerald-500 text-white border-emerald-600' : 'bg-gray-800 text-white hover:bg-gray-700'}
+              `}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+      )
+    },
+    {
+      key: 'notifications',
+      title: 'Notifications',
+      content: (
+        <div className="flex flex-col gap-4">
+          <div className="flex justify-between items-center">
+            <span>Email Alerts</span>
+            <Toggle checked={true} onChange={() => {}} />
+          </div>
+          <div className="flex justify-between items-center">
+            <span>Push Notifications</span>
+            <Toggle checked={false} onChange={() => {}} />
+          </div>
+        </div>
+      )
+    }
+  ];
+
   return (
-    <div className='p-6 flex flex-col gap-3 items-center'>
-      <div id='profile' className='bg-gray-400/50 w-full h-25 flex items-center justify-evenly rounded-2xl'>
-        <div className='flex gap-5'>
-          <img className='bg-white rounded-full h-20 w-20 ' src="" alt="" />
-          <div className='w-50 bg-red-500 h-20' >
-          </div>
-        </div>
-        <button className='bg-yellow-200 p-3 rounded-2xl'>Login</button>
-      </div>
+    <div className="w-full h-fit overflow-hidden px-4 md:px-8 py-6 font-[gilroy] text-white transition-all duration-300">
 
-      {/* Data Control */}
-      <div className={`${(openSection==='DC')?'h-45 items-start':'h-15'} transition-all duration-300 datacontrol relative border-2 border-gray-500/30 w-112 overflow-hidden whitespace-pre-wrap aspect-video flex gap-5 py-5  rounded-2xl`}>
-        <div onClick={()=>handleToggle('DC')} className='flex h-15 absolute top-0 left-0  justify-between w-112 p-5 items-center hover:bg-gray-400/10 rounded-t-2xl'>
-          <h1>Data Control</h1>
-          <IoIosArrowForward className={`${(openSection==='DC')?`rotate-90`:``} transition-transform duration-300 origin-center`}/>
-        </div>
-        {openSection==='DC' && (
-          <div className='pt-10'>
-            <div className='flex h-15 p-5 justify-between w-112 items-center hover:bg-gray-400/10 rounded-2xl'>
-              <h1>Download Data</h1>
-              <button className='p-2 cursor-pointer border active:scale-95 rounded-2xl'>Download</button>
-            </div>
-          </div>
-        )}
-      </div>
+      <div className="grid md:grid-cols-2 gap-6">
+        {settingsSections.map(section => {
+          const isOpen = openSection === section.key;
 
-      {/* Look Control */}
-      <div className={`${(openSection==='Look')?'h-45 items-start':'h-15'} transition-all duration-300 datacontrol relative border-2 border-gray-500/30 overflow-hidden w-112 whitespace-pre-wrap aspect-video flex gap-5 p-5  rounded-2xl`}>
-        <div  onClick={()=>handleToggle('Look')} className='flex h-15 absolute top-0 left-0  justify-between w-112 p-5 items-center hover:bg-gray-400/10 rounded-t-2xl'>
-          <h1>Look Control</h1>
-          <IoIosArrowForward className={`${(openSection==='Look')?`rotate-90`:``} transition-transform duration-300 origin-center`}/>
-        </div>
-        {openSection==='Look' && (
-          <div className='pt-10'>
-            <div className='flex flex-col gap-3'>
-              <div className='flex justify-between items-center'>
-                <span>Sidebar Width</span>
-                <input type="range" min="200" max="500" className='w-32'/>
+          return (
+            <div
+              key={section.key}
+              className={`rounded-xl border border-gray-700/50 bg-[#1c1f26] px-6 py-5 shadow-md transition-all duration-500
+                ${isOpen ? 'max-h-[600px]' : 'max-h-[65px]'}
+                overflow-hidden md:max-h-none
+              `}
+            >
+              {/* Section Header */}
+              <div
+                onClick={() => toggleSection(section.key)}
+                className="flex items-center justify-between cursor-pointer md:cursor-default"
+              >
+                <h2 className="text-lg font-semibold">{section.title}</h2>
+                <IoIosArrowForward
+                  className={`text-xl transform transition-transform md:hidden ${isOpen ? 'rotate-90' : ''}`}
+                />
               </div>
-              <div className='flex justify-between items-center'>
-                <span>Font Size</span>
-                <input type="range" min="12" max="24" className='w-32'/>
+
+              {/* Section Content */}
+              <div
+                className={`transition-all duration-300 ease-in-out mt-4
+                  ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none h-0'}
+                  md:opacity-100 md:pointer-events-auto md:h-auto md:translate-y-0
+                `}
+              >
+                {section.content}
               </div>
             </div>
-          </div>
-        )}
-      </div>
-
-      {/* Theme Control */}
-      <div className={`${(openSection==='Theme')?'h-45 items-start':'h-15'} transition-all duration-300 datacontrol relative border-2 border-gray-500/30 overflow-hidden w-112 whitespace-pre-wrap aspect-video flex gap-5 p-5  rounded-2xl`}>
-        <div  onClick={()=>handleToggle('Theme')} className='flex h-15 absolute top-0 left-0  justify-between w-112 p-5 items-center hover:bg-gray-400/10 rounded-t-2xl'>
-          <h1>Theme Control</h1>
-          <IoIosArrowForward className={`${(openSection==='Theme')?`rotate-90`:``} transition-transform duration-300 origin-center`}/>
-        </div>
-        {openSection==='Theme' && (
-          <div className='pt-10'>
-            <div className='flex gap-5'>
-              <button className='bg-gray-800 text-white p-2 rounded-2xl'>Dark</button>
-              <button className='bg-white text-black p-2 rounded-2xl border'>Light</button>
-              <button className='bg-blue-200 text-blue-900 p-2 rounded-2xl'>System</button>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Notification Control */}
-      <div className={`${(openSection==='Notif')?'h-45 items-start':'h-15'} transition-all duration-300 datacontrol relative border-2 border-gray-500/30 overflow-hidden w-112 whitespace-pre-wrap aspect-video flex gap-5 p-5  rounded-2xl`}>
-        <div  onClick={()=>handleToggle('Notif')} className='flex h-15 absolute top-0 left-0  justify-between w-112 p-5 items-center hover:bg-gray-400/10 rounded-t-2xl'>
-          <h1>Notification Control</h1>
-          <IoIosArrowForward className={`${(openSection==='Notif')?`rotate-90`:``} transition-transform duration-300 origin-center`}/>
-        </div>
-        {openSection==='Notif' && (
-          <div className='pt-10'>
-            <div className='flex flex-col gap-3'>
-              <div className='flex justify-between items-center'>
-                <span>Email Alerts</span>
-                <input type="checkbox" />
-              </div>
-              <div className='flex justify-between items-center'>
-                <span>Push Notifications</span>
-                <input type="checkbox" />
-              </div>
-            </div>
-          </div>
-        )}
+          );
+        })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Setting
+export default Setting;

@@ -14,7 +14,7 @@ export default function MobileSidebar({ isOpen, setIsOpen }) {
 
       {/* Sidebar Panel */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 z-45 p-6 transform transition-transform duration-300 
+        className={`fixed top-0 left-0 h-full w-64 z-500 p-6 transform transition-transform duration-300 
         ${isOpen ? "translate-x-0" : "-translate-x-full"} 
         bg-blue-950/40 backdrop-blur-2xl border-r border-white/10`}
       >

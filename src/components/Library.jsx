@@ -32,31 +32,31 @@ const Library = () => {
   const paginated = filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   return (
-    <div className='p-6 flex flex-col items-center'>
+    <div className='lg:p-6 flex flex-col items-center'>
       <div className='w-full'>
         <h1 className='font-extrabold text-2xl'>All Videos</h1>
 
         <div className='options mt-4 flex justify-between items-center'>
-          <div className='flex gap-3 flex-wrap'>
+          <div className='flex gap-3 lg:flex-wrap'>
             {['toWatch', 'important', 'watched', ''].map(type => (
               <button
                 key={type}
                 onClick={() => { setVidType(type); setCurrentPage(1); }}
-                className={`h-8 px-4 text-sm rounded-md border border-gray-500 transition ${vidType === type ? 'opacity-50 bg-gray-700' : 'hover:bg-gray-800'}`}
+                className={`h-8 lg:px-4 px-2 text-sm rounded-md border border-gray-500 transition ${vidType === type ? 'opacity-50 bg-gray-700' : 'hover:bg-gray-800'}`}
               >
                 {type === '' ? 'All' : type.charAt(0).toUpperCase() + type.slice(1)}
               </button>
             ))}
           </div>
 
-          <button onClick={() => setSortOrder(p => p === 'asc' ? 'desc' : 'asc')} className='h-8 w-10 text-xl flex items-center justify-center border border-gray-500 rounded-md hover:bg-gray-800'>
+          <button onClick={() => setSortOrder(p => p === 'asc' ? 'desc' : 'asc')} className='h-8 w-10 text-xl lg:translate-y-0 -translate-y-11.5 flex items-center justify-center border border-gray-500 rounded-md hover:bg-gray-800'>
             {sortOrder === 'asc' ? <GoSortAsc /> : <GoSortDesc />}
           </button>
         </div>
 
         <hr className='my-5 w-full text-gray-400/20' />
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-1 gap-6 min-h-[50vh] w-full'>
+        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-1 gap-3 lg:min-h-[50vh] w-full'>
           {paginated.length ? (
             paginated.map(v => (
               <a

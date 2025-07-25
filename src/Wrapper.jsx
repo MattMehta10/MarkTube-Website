@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 export const MyContext = createContext();
-import Libdata from '../public/marktube_backup_1753388036672.json'; // Adjust path if needed
+import Libdata from '../src/assets/marktube_backup_1753388036672.json'; // Adjust path if needed
 
 const Wrapper = ({children}) => {
     let data=[{

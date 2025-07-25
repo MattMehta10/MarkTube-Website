@@ -18,7 +18,7 @@ const LibCard = ({data, type, size }) => {
   return (
     <div
       key={1}
-      className={`  bg-gradient-to-tr transition-all duration-500 ease-in-out from-70% from-transparent to-85% ${bg(type)} relative hover:w-114 border-2 border-gray-500/30 sm:w-112 lg:w-55 whitespace-pre-wrap aspect-video flex lg:flex-col lg:gap-0 gap-5 items-start rounded-2xl h-20 lg:h-40 lg:hover:scale-102 lg:hover:w-55 text-white`}
+      className={`bg-gradient-to-tr transition-all duration-500 ease-in-out from-70% from-transparent to-85% ${bg(type)} relative border-2 border-gray-500/30 w-80 lg:w-55 whitespace-pre-wrap aspect-video flex lg:flex-col lg:gap-0 gap-1 items-start rounded-2xl h-20 lg:h-40 lg:hover:scale-102 lg:hover:w-55 text-white`}
     > 
 {/* Thumbnail fixed with image tag for proper rendering */}
       <div className=' w-[30%] lg:w-[100%]'><img
