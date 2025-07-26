@@ -32,9 +32,9 @@ const LibCard = ({data, type, size }) => {
 /></div>
 
       {/* Text & Info Block */}
-      <div className='w-[60%]'>
+      <div className='lg:w-[100%] w-[60%]'>
       <div className="mt-2 lg:-mt-1 ml-4 flex flex-col justify-start">
-        <h1 className="text-[14px] font-[gilroy] font-extrabold mt-1 leading-snug text-white overflow-hidden  break-words"
+        <h1 className="text-[14px] font-[gilroyE] font-normal mt-1 leading-snug text-white overflow-hidden  break-words"
   style={{
     display: '-webkit-box',
     WebkitLineClamp: 2,

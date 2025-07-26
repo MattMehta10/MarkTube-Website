@@ -35,7 +35,7 @@ const Library = () => {
   return (
     <motion.div initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.5,delay:.5}} className='lg:p-6 flex flex-col items-center'>
       <div className='w-full'>
-        <h1 className='font-extrabold text-2xl'>All Videos</h1>
+        <h1 className='font-[gilroyE] font-normal text-2xl'>All Videos</h1>
 
         <div className='options mt-4 flex justify-between items-center'>
           <div className='flex gap-3 lg:flex-wrap'>

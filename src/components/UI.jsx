@@ -83,7 +83,7 @@ const UIShowcase = () => {
           <Lottie animationData={animationdata} loop={true} />
           <Lottie animationData={animationdata} loop={true} />
         </div>
-        <h2 className="text-3xl font-bold text-center">
+        <h2 className="text-3xl font-bold 'font-[gilroy]' text-center">
           Gamify Your Study Journey
         </h2>
         <p className="text-center max-w-xl text-gray-300">

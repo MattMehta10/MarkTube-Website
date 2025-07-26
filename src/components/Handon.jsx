@@ -252,17 +252,17 @@ if (isMobile) {
   },{scope:containerRef})
   return (<>
       <hr className='lg:hidden text-white mt-3 mx-15' />
-    <div ref={containerRef} id='Working' className='flex flex-col gap-20 p-10 font-[gilroy] items-center'>
-        <h1 ref={heading1Ref} className='font-extrabold lg:mt-40 mt-30 lg:mb-30 mb-10 lg:text-5xl text-3xl text-white' >“How It Works”</h1>
-        <p  ref={heading2Ref} className='lg:text-5xl text-[6vw] lg:mb-20 mb-80 text-white'>An Interactive Walkthrough</p>
+    <div ref={containerRef} id='Working' className='flex flex-col gap-20 p-10 items-center'>
+        <h1 ref={heading1Ref} className='font-normal lg:mt-40 mt-30 lg:mb-30 font-[gilroyE] mb-10 lg:text-5xl text-3xl text-white' >“How It Works”</h1>
+        <p  ref={heading2Ref} className='lg:text-5xl text-[6vw] font-[gilroy] lg:mb-20 mb-80 text-white'>An Interactive Walkthrough</p>
         <div ref={WidecardRef} className='flex lg:flex-row flex-col-reverse lg:mb-0 mb-90 lg:gap-15 h-100 lg:h-300'>
         <WideCard data={data[1]} size={100}/>
         <div className='flex flex-col lg:items-start items-center text-white lg:p-20'>
-        <p className='cardp1 text-white text-lg'>MarkTube helps you to:</p><br />
-        <ul>
-            <li ref={ButtonW} >✅ Keep track of what you’ve <span className='text-green-400 font-bold'>Watched</span></li>
-            <li ref={ButtonI}>⭐ Flag content as <span className='text-red-400 font-bold'>Important</span></li>
-            <li ref={ButtonTW}>✔️ Bookmark videos as <span className='text-yellow-400 font-bold'>Want to Watch</span></li>
+        <p className='cardp1 text-white font-[gilroyE] text-lg'>MarkTube helps you to:</p><br />
+        <ul >
+            <li className='font-[gilroy]' ref={ButtonW} >✅ Keep track of what you’ve <span className='text-green-400 font-[gilroyE] font-semibold'>Watched</span></li>
+            <li className='font-[gilroy]' ref={ButtonI}>⭐ Flag content as <span className='text-red-400 font-[gilroyE] font-semibold'>Important</span></li>
+            <li className='font-[gilroy]' ref={ButtonTW}>✔️ Bookmark videos as <span className='text-yellow-400 font-[gilroyE] font-semibold'>Want to Watch</span></li>
         </ul>
         <span className='lg:mt-0 mt-10' ref={ButtonE}>No clutter. No algorithms. Just your priorities.</span>
         <div ref={arrow1ref} className='absolute lg:flex hidden z-10 w-50 h-15 right-100 top-85' style={{backgroundImage: `url(${arrow1})`}} ></div>
@@ -272,12 +272,12 @@ if (isMobile) {
         </div></div>
         <div ref={FeedcardRef} className='flex lg:flex-row flex-col lg:gap-15 lg:mt-0 mt-30 h-300 lg:h-300'>
         <div className='flex flex-col text-white lg:items-start items-center lg:p-20'>
-        <p className='cardp2 text-white text-lg lg:pr-25 lg:pb-0 pb-4'>Interact with a sample feed video card:</p>
+        <p className='cardp2 text-white font-[gilroyE] text-lg lg:pr-25 lg:pb-0 pb-4'>Interact with a sample feed video card:</p>
         <ul>
-            <li ref={FButtonI}>✔️ Mark video from the feed</li>
-            <li ref={FButtonTW} >⭐ Instant Save with Real-Time UI Update</li>
+            <li className='font-[gilroy]' ref={FButtonI}>✔️ Mark video from the feed</li>
+            <li className='font-[gilroy]' ref={FButtonTW} >⭐ Instant Save with Real-Time UI Update</li>
         </ul>
-        <span className='lg:mt-0 mt-10' ref={FButtonE}>
+        <span className='lg:mt-0 font-[gilroy] mt-10' ref={FButtonE}>
         “It’s not just watching. It’s watching with intent.”
         </span>
         </div>

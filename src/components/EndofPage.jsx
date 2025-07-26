@@ -168,7 +168,7 @@ const t1 = gsap.timeline({
         <section className="bg-gray-950 text-white lg:mt-0 mt-30 py-20 px-4 md:px-20 space-y-16">
             {/* User Review Section */}
             <div ref={cardRef}>
-                <h2 className="text-4xl font-bold text-center mb-30">What MarkTube users are saying</h2>
+                <h2 className="text-4xl font-normal text-center font-[gilroyE] mb-30">What MarkTube users are saying</h2>
                 <div className="flex flex-wrap gap-5 justify-center items-center">
                     <div className="lg:flex hidden" ref={Empty1}><SpotlightCard className="h-35 opacity-1 w-50 animate-pulse" >
                         <div class="flex animate-pulse opacity-1 space-x-4">
@@ -214,7 +214,7 @@ const t1 = gsap.timeline({
 
             {/* Final Persuasion */}
             <div className="mt-40 text-center space-y-6">
-                <h3 className="text-2xl font-semibold">🎯 Reclaim Your YouTube. Make It Yours.</h3>
+                <h3 className="text-2xl font-[gilroyE] font-normal">🎯 Reclaim YouTube. Make It Your Again.</h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
                     Say goodbye to cluttered Watch Later queues, missed tutorials, or algorithmic noise.
                     MarkTube brings focus back to your feed — in just one click.

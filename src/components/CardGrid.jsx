@@ -2,7 +2,6 @@ import React, { useContext, useRef } from 'react';
 import Playlist from './Cards/Playlist';
 import { MyContext } from '../Wrapper';
 import './CardGrid.css';
-import introcond from "/Intro Cond Black Free.otf"
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import TextPlugin from 'gsap/TextPlugin';
@@ -190,9 +189,9 @@ let t1 = gsap.timeline({
   
   return (
   <div className='wrapper relative flex flex-col lg:mt-0 mt-50 items-center ' >
-      <p ref={HeadRef} className='absolute lg:mt-10 mt-0 lg:mb-0 mb-10 font-[gilroy] font-bold z-5 text-white lg:text-4xl text-lg text-shadow-2xl' ></p>
+      <p ref={HeadRef} className='absolute lg:mt-10 mt-0 lg:mb-0 mb-10 font-[gilroyE] font-normal z-5 text-white lg:text-4xl text-lg text-shadow-2xl' ></p>
     <div className=" lg:mt-0 mt-25 bg-black lg:h-auto h-120 relative flex justify-center lg:scale-70 lg:min-h-screen px-4 md:px-8 space-y-2 overflow-hidden fade-all-sides">
-      <div className={`textwrapper absolute items-center flex flex-col top-1/2 left-1/2 lg:text-7xl text-4xl lg:scale-145 font-extrabold -translate-x-1/2 -translate-y-1/2 z-50 text-white text-center`}>
+      <div className={`textwrapper absolute items-center flex font-[gilroyE] flex-col top-1/2 left-1/2 lg:text-7xl text-4xl lg:scale-145 font-extrabold -translate-x-1/2 -translate-y-1/2 z-50 text-white text-center`}>
           <span ref={TextRef1}  className='bg-[#101828] text-[#00d491] inline w-fit px-1' >REINVENT YOUR</span>
           <span ref={TextRef2} className='bg-[#101828] text-[#00d491]  inline w-fit px-1'>YOUTUBE</span>
           <span ref={TextRef3} className='bg-[#101828] text-[#00d491]  inline w-fit px-1'>EXPERIENCE.</span> 

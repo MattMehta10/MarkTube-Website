@@ -11,7 +11,7 @@ const Workspace = () => {
  const watchNext =[...(Libdata.toWatch || [])]
   const [activeTab,setActiveTab] = useState('Overview')
   return (
-    <div className="flex lg:flex-row flex-col h-full text-white font-[gilroy]">
+    <div className="flex lg:flex-row flex-col h-full text-white font-[gilroyE] font-normal">
       {/* Sidebar */}
       <aside className="lg:w-56 border-r flex-col border-gray-50/12 bg-transparent lg:p-6 py-2 px-6">
         <h2 className="lg:text-2xl text-xl lg:mb-8 mb-4 font-extrabold text-white tracking-wide">Workspace</h2>

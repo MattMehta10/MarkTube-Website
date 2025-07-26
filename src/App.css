@@ -1,0 +1,9 @@
+@font-face {
+    font-family: gilroy;
+    src: url("/public/Fonts/GILROY-LIGHT.woff");
+}
+@font-face {
+    font-family: gilroyE;
+    src: url("/public/Fonts/GILROY-EXTRABOLD.woff");
+}
+

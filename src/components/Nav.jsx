@@ -23,9 +23,9 @@ const Nav = () => {
   <div className='bg-transparent z-400 flex h-18 lg:pl-8 pl-4 pr-8 lg:pt-0 justify-between lg:items-center pt-3'>
     <button className='text-white z-505 fixed mix-blend-difference lg:hidden' ><h1><HamburgerIcon isOpen={isOpen} onClick={() => setIsOpen(prev => !prev)} /></h1></button>
     <MobileSidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-       <h1 className='text-white z-100 lg:flex items-center gap-2 text-xl font-extrabold font-[gilroy] hidden'><img className='h-7' src={logo}/>MarkTube</h1>
+       <h1 className='text-white z-100 lg:flex items-center gap-2 text-xl font-normal font-[gilroyE] hidden'><img className='h-7' src={logo}/>MarkTube</h1>
     <div className='lg:fixed top-4 left-1/2 [text-shadow:0_0_6px_rgba(0,0,0,0.6)] lg:flex transform -translate-x-1/2 z-50 hidden'>
-      <SpotlightCard className='flex gap-25 text-xl w-[40rem] h-11 rounded-2xl font-extrabold font-[gilroy]  items-center justify-center text-amber-50 bg-transparent '>
+      <SpotlightCard className='flex gap-25 text-xl w-[40rem] h-11 rounded-2xl font-normal font-[gilroyE]  items-center justify-center text-amber-50 bg-transparent '>
      <NavLink className={(e) => e.isActive ? "text-green-400 duration-300 ease-in" : "hover:text-green-300"}
         to="/">
         <h1>Home</h1>

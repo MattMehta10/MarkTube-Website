@@ -55,12 +55,12 @@ const pricing = {
   const bgRef = useRef()
   return (<>
     
-    <section className="w-full flex flex-col overflow-hidden items-center py-4 text-white font-[gilroy]">
+    <section className="w-full flex flex-col overflow-hidden items-center py-4 text-white font-[gilroyE]">
   <div className="w-full h-screen overflow-hidden absolute z-0 top-0" ref={bgRef}>
         <Aurora />
     </div>
-      <h2 className="text-3xl z-50 font-extrabold mb-2 tracking-tight">Pricing Plans</h2>
-      <p className="mb-8 z-50 text-gray-400 text-lg">Choose the plan that fits your workflow</p>
+      <h2 className="text-3xl z-50 font-normal mb-2 tracking-tight">Pricing Plans</h2>
+      <p className="mb-8 z-50 text-gray-400 font-[gilroy] font-extrabold text-lg">Choose the plan that fits your workflow</p>
       <motion.div initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.5,delay:.5}}  className="w-80 lg:w-full lg:max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
         {planOrder.map((key) => {
           const plan = pricing.plans[key];
@@ -75,32 +75,32 @@ const pricing = {
                   `}
             >
               {isCurrent && (
-                <span className="absolute top-4 right-4 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full font-bold shadow">
+                <span className="absolute top-4 right-4 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full font-normal shadow">
                   Current Plan
                 </span>
               )}
               <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
               <div className="mb-4">
                 {plan.priceMonthly && (
-                  <span className="text-3xl font-extrabold text-emerald-400">
+                  <span className="text-3xl font-normal text-emerald-400">
                     ₹{plan.priceMonthly}
                     <span className="text-base text-gray-400 font-medium">/mo</span>
                   </span>
                 )}
                 {plan.oneTimePrice && (
-                  <span className="text-3xl font-extrabold text-yellow-400">
+                  <span className="text-3xl font-normal text-yellow-400">
                     ₹{plan.oneTimePrice}
                     <span className="text-base text-gray-400 font-medium"> one-time</span>
                   </span>
                 )}
                 {!plan.priceMonthly && !plan.oneTimePrice && (
-                  <span className="text-3xl font-extrabold text-gray-300">Free</span>
+                  <span className="text-3xl font-normal text-gray-300">Free</span>
                 )}
               </div>
               <div className="mb-4 text-sm text-gray-300">
                 <span className="font-bold">{plan.maxVideos.toLocaleString()}</span> video limit
               </div>
-              <ul className="mb-6 w-full text-left space-y-3">
+              <ul className="mb-6 w-full font-[gilroy] text-left space-y-3">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <FaCheckCircle className="text-emerald-400 p-1 text-xl" />

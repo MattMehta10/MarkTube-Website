@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify'
 import Wrapper from './Wrapper.jsx'
 import Login from './components/Login.jsx'
 import Notification from './components/Notification.jsx'
-
+import './App.css'
 
 createRoot(document.getElementById('root')).render(<>
 <BrowserRouter>
